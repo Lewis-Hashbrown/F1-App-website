@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Widget 2025 - Formula 1 Schedule Widget for Android</title>
+    <meta name="description" content="Stay updated with Formula 1 race schedules directly on your Android home screen. Shows FP1, FP2, FP3, Qualifying, Race times, and Sprint sessions when applicable.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            margin-bottom: 1rem;
+        }
+
+        .f1-logo {
+            font-weight: bold;
+            color: #e10600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #e10600;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            color: #e10600;
+            margin-bottom: 1rem;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #e10600, #ff4444);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(225, 6, 0, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(225, 6, 0, 0.4);
+        }
+
+        .privacy-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .contact {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #e10600;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .schedule-preview {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .session-time {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .session-time:last-child {
+            border-bottom: none;
+        }
+
+        .session-name {
+            color: #e10600;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><span class="f1-logo">F1</span> Widget 2025</h1>
+            <p class="subtitle">Never Miss a Formula 1 Session Again</p>
+            <p>Stay updated with live F1 race schedules directly on your Android home screen</p>
+        </div>
+
+        <div class="content">
+            <h2>🏎️ The Ultimate Formula 1 Schedule Widget</h2>
+            <p>F1 Widget 2025 brings the complete Formula 1 race weekend schedule right to your Android home screen. Whether it's practice sessions, qualifying, or race day - you'll always know when the action starts.</p>
+
+            <div class="schedule-preview">
+                <h3>🏁 This Weekend: Bahrain GP</h3>
+                <div class="session-time">
+                    <span class="session-name">FP1</span>
+                    <span>Fri 14:30</span>
+                </div>
+                <div class="session-time">
+                    <span class="session-name">FP2</span>
+                    <span>Fri 18:00</span>
+                </div>
+                <div class="session-time">
+                    <span class="session-name">FP3</span>
+                    <span>Sat 14:30</span>
+                </div>
+                <div class="session-time">
+                    <span class="session-name">QUALI</span>
+                    <span>Sat 18:00</span>
+                </div>
+                <div class="session-time">
+                    <span class="session-name">RACE</span>
+                    <span>Sun 18:00</span>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>📅 Complete Session Schedule</h3>
+                    <p>View all race weekend sessions: Free Practice 1, 2, 3, Qualifying, Race, and Sprint sessions when applicable. Never miss a moment of F1 action.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🌍 Automatic Time Zones</h3>
+                    <p>All session times are automatically converted to your local timezone. No more manual calculations or confusion about race start times.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🏆 2025 Season Ready</h3>
+                    <p>Updated with the complete 2025 Formula 1 calendar including all 24 races. From Bahrain to Abu Dhabi, we've got you covered.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>⚡ Live Updates</h3>
+                    <p>Widget automatically updates to show the next upcoming session. Stay informed without opening any apps.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🎨 Multiple Sizes</h3>
+                    <p>Choose from different widget sizes to fit your home screen perfectly. Compact 2x2 or detailed 3x2 layouts available.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🔋 Battery Friendly</h3>
+                    <p>Optimized for minimal battery usage while keeping you updated with the latest F1 schedule information.</p>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h2>📱 Get F1 Widget 2025</h2>
+                <p style="margin: 1rem 0;">Download now from the Google Play Store:</p>
+                <a href="#" class="download-btn">
+                    📱 Download from Play Store
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    <em>Coming soon to Google Play Store</em>
+                </p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>🔒 Privacy & Security</h2>
+            <p>We take your privacy seriously. F1 Widget 2025 is designed to be safe and secure:</p>
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>No personal data collection</li>
+                <li>No tracking or analytics</li>
+                <li>Only fetches F1 schedule data from official sources</li>
+                <li>No ads or data sharing with third parties</li>
+                <li>Open source and transparent</li>
+            </ul>
+            <p><a href="privacy-policy.html">Read our full Privacy Policy</a></p>
+        </div>
+
+        <div class="contact">
+            <h2>📧 Developer Contact</h2>
+            <p><strong>Developer:</strong> Lewis Brown</p>
+            <p><strong>Email:</strong> <a href="mailto:Lewisbrown2208@gmail.com">Lewisbrown2208@gmail.com</a></p>
+            <p><strong>Support:</strong> For questions, feedback, or technical support, please email us at the address above.</p>
+            <p style="margin-top: 1rem;">
+                <a href="https://buymeacoffee.com/lewisbrown" target="_blank" style="color: #e10600; text-decoration: none;">
+                    ☕ Support the Developer - Buy me a coffee
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
