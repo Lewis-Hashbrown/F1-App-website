@@ -1,238 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Widget 2025 - Formula 1 Schedule Widget for Android</title>
-    <meta name="description" content="Stay updated with Formula 1 race schedules directly on your Android home screen. Shows FP1, FP2, FP3, Qualifying, Race times, and Sprint sessions when applicable.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            text-align: center;
-            padding: 2rem 0;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .header .subtitle {
-            font-size: 1.2rem;
-            color: #f0f0f0;
-            margin-bottom: 1rem;
-        }
-
-        .f1-logo {
-            font-weight: bold;
-            color: #e10600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .feature {
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #e10600;
-            transition: transform 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature h3 {
-            color: #e10600;
-            margin-bottom: 1rem;
-        }
-
-        .download-section {
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #e10600, #ff4444);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(225, 6, 0, 0.3);
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(225, 6, 0, 0.4);
-        }
-
-        .privacy-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-        }
-
-        .contact {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .contact a {
-            color: #e10600;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .container {
-                padding: 10px;
-            }
-            
-            .content {
-                padding: 1rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F1 Schedule Widgets for Android</title>
+  <meta name="description" content="Home screen widgets for Android that show every session of the next Formula 1 race weekend in your own time zone, with reminders and team and driver themes.">
+  <meta name="theme-color" content="#0b0f13">
+  <meta property="og:title" content="F1 Schedule Widgets for Android">
+  <meta property="og:description" content="Every session of the next race weekend on your home screen, in your time zone.">
+  <meta property="og:image" content="https://f1-schedule-widgets.netlify.app/assets/screens/homescreen.webp">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1><span class="f1-logo">F1</span> Widget 2025</h1>
-            <p class="subtitle">Never Miss a Formula 1 Session Again</p>
-            <p>Stay updated with live F1 race schedules directly on your Android home screen</p>
-        </div>
-
-        <div class="content">
-            <h2>🏎️ The Ultimate Formula 1 Schedule Widget</h2>
-            <p>F1 Widget 2025 brings the complete Formula 1 race weekend schedule right to your Android home screen. Whether it's practice sessions, qualifying, or race day - you'll always know when the action starts.</p>
-
-
-
-            <div class="features">
-                <div class="feature">
-                    <h3>📅 Complete Session Schedule</h3>
-                    <p>View all race weekend sessions: Free Practice 1, 2, 3, Qualifying, Race, and Sprint sessions when applicable. Never miss a moment of F1 action.</p>
-                </div>
-
-                <div class="feature">
-                    <h3>🌍 Automatic Time Zones</h3>
-                    <p>All session times are automatically converted to your local timezone. No more manual calculations or confusion about race start times.</p>
-                </div>
-
-                <div class="feature">
-                    <h3>🏆 2025 Season Ready</h3>
-                    <p>Updated with the complete 2025 Formula 1 calendar including all 24 races. From Bahrain to Abu Dhabi, we've got you covered.</p>
-                </div>
-
-                <div class="feature">
-                    <h3>⚡ Live Updates</h3>
-                    <p>Widget automatically updates to show the next upcoming session. Stay informed without opening any apps.</p>
-                </div>
-
-                <div class="feature">
-                    <h3>🎨 Multiple Sizes</h3>
-                    <p>Choose from different widget sizes to fit your home screen perfectly. Compact 2x2 or detailed 3x2 layouts available.</p>
-                </div>
-
-                <div class="feature">
-                    <h3>🔋 Battery Friendly</h3>
-                    <p>Optimized for minimal battery usage while keeping you updated with the latest F1 schedule information.</p>
-                </div>
-            </div>
-
-            <div class="download-section">
-                <h2>📱 Get F1 Widget 2025</h2>
-                <p style="margin: 1rem 0;">Download now from the Google Play Store:</p>
-                <a href="#" class="download-btn">
-                    📱 Download from Play Store
-                </a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    <em>Coming soon to Google Play Store</em>
-                </p>
-            </div>
-        </div>
-
-        <div class="privacy-section">
-            <h2>🔒 Privacy & Security</h2>
-            <p>We take your privacy seriously. F1 Widget 2025 is designed to be safe and secure:</p>
-            <ul style="margin: 1rem 0; padding-left: 2rem;">
-                <li>No personal data collection</li>
-                <li>No tracking or analytics</li>
-                <li>Only fetches F1 schedule data from official sources</li>
-                <li>No ads or data sharing with third parties</li>
-                <li>Open source and transparent</li>
-            </ul>
-            <p><a href="privacy-policy.html">Read our full Privacy Policy</a></p>
-        </div>
-
-        <div class="contact">
-            <h2>📧 Developer Contact</h2>
-            <p><strong>Developer:</strong> Lewis Brown</p>
-            <p><strong>Email:</strong> <a href="mailto:Lewisbrown2208@gmail.com">Lewisbrown2208@gmail.com</a></p>
-            <p><strong>Support:</strong> For questions, feedback, or technical support, please email us at the address above.</p>
-            <p style="margin-top: 1rem;">
-                <a href="https://buymeacoffee.com/lewisbrown" target="_blank" style="color: #e10600; text-decoration: none;">
-                    ☕ Support the Developer - Buy me a coffee
-                </a>
-            </p>
-        </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="assets/icon-192.png" alt="" width="40" height="40">
+        <span><b>F1</b> Schedule Widgets</span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#weekend">This weekend</a>
+        <a href="#themes">Themes</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title">Every session, on your home screen.</h1>
+          <p class="lede">A widget for Android that shows practice, qualifying and race start times for the next Formula 1 weekend. Times are already in your time zone, and it moves on to the next race by itself.</p>
+          <div class="actions">
+            <a class="button" href="https://play.google.com/store/apps/details?id=com.f1widget">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 5 3.5Z"/></svg>
+              Get it on Google Play
+            </a>
+            <span class="small">Free. Android 7 and newer.</span>
+          </div>
+        </div>
+
+        <div class="demo">
+          <div class="widget-shell">
+            <div class="widget" data-widget role="img" aria-label="Widget preview">
+              <div class="frame"></div>
+              <img class="track" data-track src="assets/tracks/baku.webp" alt="">
+              <img class="corner left" data-corner-left src="assets/frames/red_bull_corner.svg" alt="">
+              <img class="corner right" data-corner-right src="assets/frames/red_bull_corner_right.svg" alt="">
+              <div class="grid">
+                <div class="dates" data-dates></div>
+                <div class="badge">
+                  <img class="header" data-header src="assets/frames/red_bull_header.svg" alt="">
+                  <span class="gap"></span>
+                  <img class="art" data-art src="assets/art/verstappen.webp" alt="">
+                </div>
+                <div class="gp" data-gp></div>
+                <div class="rows" data-rows></div>
+                <div class="place" data-place></div>
+              </div>
+            </div>
+          </div>
+          <div class="theme-picker" data-picker role="group" aria-label="Try a theme"></div>
+          <p class="demo-caption">This is the real schedule, shown in <span data-zone>your time zone</span>. Pick a theme to see how it changes the widget.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="weekend" aria-labelledby="weekend-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="weekend-title">The weekend at a glance</h2>
+          <p data-weekend-title></p>
+        </div>
+        <ol class="timeline" data-timeline></ol>
+      </div>
+    </section>
+
+    <section aria-labelledby="widgets-title">
+      <div class="wrap feature">
+        <div>
+          <h2 id="widgets-title">Two sizes, no setup</h2>
+          <ul>
+            <li><b>Compact 2×2 or wide 3×2.</b> Both show all five sessions, the circuit and its track map.</li>
+            <li><b>Your time zone.</b> Times change automatically when you travel or the clocks change.</li>
+            <li><b>Sprint weekends.</b> Sprint Qualifying and the Sprint replace practice sessions when they run.</li>
+            <li><b>Always the next race.</b> The widget moves on once a race weekend ends.</li>
+            <li><b>Works offline.</b> The full 2026 calendar is built into the app.</li>
+          </ul>
+        </div>
+        <div class="phone"><img src="assets/screens/homescreen.webp" alt="Android home screen with the F1 widget showing the Azerbaijan Grand Prix sessions" width="540" height="1200" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="reminders-title">
+      <div class="wrap feature flip">
+        <div>
+          <h2 id="reminders-title">Reminders before the lights go out</h2>
+          <ul>
+            <li><b>Pick your sessions.</b> Turn reminders on for any practice, qualifying, sprint or race.</li>
+            <li><b>Pick your timing.</b> Get a reminder 15, 30, 45 or 60 minutes before, or several of these.</li>
+            <li><b>Weekend alert.</b> An optional note at 9am on the first day of each race weekend.</li>
+          </ul>
+        </div>
+        <div class="phone"><img src="assets/screens/notifications.webp" alt="Notification settings with reminders on for qualifying, sprint and race, 15 and 60 minutes before" width="540" height="1200" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="themes" aria-labelledby="themes-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="themes-title">Theme Packs for all 11 teams and 22 drivers</h2>
+          <p>Give your widget your team's colours or your driver's helmet. Every theme works on both widget sizes. The Standard look stays free.</p>
+        </div>
+        <div class="art-wall" data-wall></div>
+
+        <div class="offers">
+          <div class="offer panel">
+            <h3>Try every theme</h3>
+            <p class="price">Free</p>
+            <p>14 days, once per Google account. Sign in with Google to start. It ends by itself and you are never charged.</p>
+          </div>
+          <div class="offer panel">
+            <h3>One team or driver</h3>
+            <p class="price">£1.99</p>
+            <p>A one-time purchase through Google Play. Yours to keep.</p>
+          </div>
+          <div class="offer panel accent">
+            <h3>All 33 themes</h3>
+            <p class="price">£4.99</p>
+            <p>The full 2026 collection. If you already bought single themes, up to 2 of them come off the price.</p>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:16px">UK prices. Google Play shows the price in your currency before you pay. Themes cover the 2026 season.</p>
+
+        <div class="phones" style="margin-top:48px">
+          <div class="phone"><img src="assets/screens/shop.webp" alt="Theme Packs screen with team and driver themes" width="540" height="1200" loading="lazy"></div>
+          <div class="phone"><img src="assets/screens/detail.webp" alt="Norris theme page with compact and wide widget previews" width="540" height="1200" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calendar" aria-labelledby="calendar-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="calendar-title">2026 calendar</h2>
+          <p>All 24 rounds, with dates in your time zone. The widget follows this calendar.</p>
+        </div>
+        <ol class="calendar" data-calendar></ol>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="privacy-title">What the app does with your data</h2>
+          <p>The short version. The <a class="text-link" href="privacy-policy.html">privacy policy</a> has the detail.</p>
+        </div>
+        <div class="facts">
+          <div class="fact panel">
+            <h3>No ads or tracking</h3>
+            <p>There are no adverts and no analytics. The schedule is built into the app, so the widget doesn't need an account or the internet.</p>
+          </div>
+          <div class="fact panel">
+            <h3>Settings stay on your phone</h3>
+            <p>Your reminder choices and theme are stored on your device.</p>
+          </div>
+          <div class="fact panel">
+            <h3>The free trial uses Google sign-in</h3>
+            <p>To stop repeat trials, we keep an account ID and the date your trial started. Your email is held by Google's Firebase sign-in service. You can ask us to delete it.</p>
+          </div>
+          <div class="fact panel">
+            <h3>Google Play handles payments</h3>
+            <p>We never see your card details. The app asks Google Play which themes you own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="faq-title">Questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How do I add the widget?</summary>
+            <p>Touch and hold an empty part of your home screen, tap Widgets, then search for F1. Drag the size you want onto your home screen.</p>
+          </details>
+          <details>
+            <summary>My reminders arrive late or not at all.</summary>
+            <p>Some phones pause apps in the background to save battery. Open your phone's Settings, go to Apps, then F1 Schedule Widgets, then Battery, and choose Unrestricted.</p>
+          </details>
+          <details>
+            <summary>I bought a theme on another phone. How do I get it back?</summary>
+            <p>Sign in to Google Play with the same account, open Theme Packs and tap Restore purchases.</p>
+          </details>
+          <details>
+            <summary>What happens when my trial ends?</summary>
+            <p>Your widget goes back to the Standard look. Themes you bought stay active. Schedules and reminders are always free.</p>
+          </details>
+          <details>
+            <summary>A session time looks wrong.</summary>
+            <p>Email us with the race and session. Formula 1 sometimes moves sessions, and we update the app when it does.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by Lewis Brown. Questions or problems: <a class="text-link" href="mailto:Lewisbrown2208@gmail.com">Lewisbrown2208@gmail.com</a></p>
+      <nav aria-label="Legal">
+        <a class="text-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Trial and purchase terms</a>
+      </nav>
+      <p class="legal">F1 Schedule Widgets is an unofficial app. It is not associated with Formula 1, the FIA or any team or driver. F1, Formula 1 and related marks are trade marks of Formula One Licensing B.V. Team and driver names are used to identify them. © <span data-year>2026</span> Lewis Brown.</p>
+    </div>
+  </footer>
+
+  <script src="races.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
