@@ -120,69 +120,33 @@ p { margin: 0; }
   .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
 }
 
-/* Live widget replica. Geometry follows f1_race_widget_3x2(_themed).xml; 1dp = --dp. */
+/* Hero: the app's own card stack. The front card is the chosen theme; the two behind peek out, tilted. */
 .demo { display: grid; justify-items: center; gap: 18px; width: 100%; }
-.demo-caption { font-size: .95rem; color: var(--telemetry); text-align: center; max-width: 30rem; }
-.widget-shell { width: min(100%, 460px); container-type: inline-size; }
-.widget {
-  --dp: calc(100cqw / 253);
-  --accent: #ff4444;
-  --title: #ff4444;
-  --quali-time: var(--quali);
-  --race-time: var(--race);
-  position: relative;
-  aspect-ratio: 253 / 186;
-  font-family: "Roboto", sans-serif;
-  filter: drop-shadow(0 24px 50px rgba(0, 0, 0, .6));
+.demo-caption { font-size: .95rem; color: var(--telemetry); text-align: center; max-width: 32rem; }
+.stack {
+  position: relative; width: min(100%, 480px); aspect-ratio: 1000 / 810;
+  perspective: 1200px;
 }
-.widget .frame {
-  position: absolute; inset: calc(6 * var(--dp));
-  background: rgba(0, 0, 0, .667);
-  border: calc(2 * var(--dp)) solid var(--accent);
-  border-radius: calc(8 * var(--dp));
+.stack img {
+  position: absolute; inset: 0; margin: auto; width: 84%; height: auto;
+  border-radius: 14px; transition: transform .6s ease, opacity .6s ease;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, .55));
 }
-.widget .track {
-  position: absolute;
-  inset: calc(10 * var(--dp));
-  width: calc(100% - 20 * var(--dp)); height: calc(100% - 20 * var(--dp));
-  object-fit: contain; opacity: .25;
+.stack img.behind-left { transform: translateX(-26%) rotate(-7deg) scale(.78); opacity: .5; z-index: 1; }
+.stack img.front { transform: none; opacity: 1; z-index: 3; }
+.stack img.behind-right { transform: translateX(26%) rotate(7deg) scale(.78); opacity: .5; z-index: 2; }
+.stack-name {
+  font-family: var(--display); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--telemetry); font-size: .95rem;
 }
-.widget.themed .track { inset: calc(42 * var(--dp)) calc(14 * var(--dp)) calc(28 * var(--dp)); width: calc(100% - 28 * var(--dp)); height: calc(100% - 70 * var(--dp)); }
-.widget .corner { position: absolute; bottom: calc(8 * var(--dp)); width: calc(19 * var(--dp)); height: calc(19 * var(--dp)); display: none; }
-.widget .corner.left { left: calc(8 * var(--dp)); }
-.widget .corner.right { right: calc(8 * var(--dp)); }
-.widget.themed .corner { display: block; }
-.widget .grid {
-  position: absolute; inset: 0;
-  padding: calc(12 * var(--dp));
-  display: grid;
-  grid-template-columns: minmax(0, .8fr) minmax(0, .2fr);
-  grid-template-rows: minmax(0, .15fr) minmax(0, .2fr) minmax(0, .55fr) minmax(0, .1fr);
-  line-height: 1;
-  color: #fff;
-}
-.widget.themed .grid { padding: calc(10 * var(--dp)); grid-template-columns: minmax(0, .55fr) minmax(0, .45fr); grid-template-rows: minmax(0, .23fr) minmax(0, .12fr) minmax(0, .55fr) minmax(0, .1fr); }
-.widget .dates { align-self: center; padding-left: calc(4 * var(--dp)); font-weight: 700; font-size: calc(13 * var(--dp)); white-space: nowrap; }
-.widget .badge { display: none; position: relative; margin: calc(-2 * var(--dp)) calc(-2 * var(--dp)) 0 0; }
-.widget.themed .badge { display: flex; padding: calc(2 * var(--dp)) calc(2 * var(--dp)) calc(2 * var(--dp)) 0; }
-.widget .badge .header { position: absolute; inset: 0; width: 100%; height: 100%; }
-.widget .badge .gap { flex: var(--gap, .43); }
-.widget .badge .art { position: relative; flex: var(--art, .57); min-width: 0; height: 100%; object-fit: contain; }
-.widget .gp {
-  grid-column: 1 / -1; align-self: center; text-align: center;
-  color: var(--title); font-weight: 700; font-size: calc(15 * var(--dp)); white-space: nowrap; overflow: hidden;
-}
-.widget.themed .gp { text-align: left; padding-left: 0; }
-.widget .rows { grid-column: 1 / -1; min-height: 0; display: grid; grid-template-rows: repeat(5, minmax(0, 1fr)); padding: 0 calc(4 * var(--dp)); font-size: calc(13 * var(--dp)); }
-.widget .row { display: flex; align-items: center; }
-.widget .row b { flex: .4; }
-.widget .row span { flex: 1; text-align: right; white-space: nowrap; }
-.widget .fp { color: var(--practice); }
-.widget .q { color: var(--quali); }
-.widget .r { color: var(--race); }
-.widget .row .q-time { color: var(--quali-time); }
-.widget .row .r-time { color: var(--race-time); font-weight: 700; }
-.widget .place { grid-column: 1 / -1; align-self: center; text-align: center; font-weight: 700; color: #ccc; font-size: calc(12 * var(--dp)); }
+@media (prefers-reduced-motion: reduce) { .stack img { transition: none; } }
+
+/* Every widget size, each drawn at its real shape. */
+.size-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 22px; align-items: end; }
+.size-grid figure { margin: 0; display: grid; gap: 10px; justify-items: center; }
+.size-grid img { width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 12px 22px rgba(0, 0, 0, .5)); }
+.size-grid figcaption { font-family: var(--display); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .9rem; color: var(--telemetry); }
+.size-grid .tall img, .size-grid .compact img { width: min(100%, 210px); }
 
 .theme-picker { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .theme-picker button {
@@ -250,8 +214,9 @@ section { padding-block: 72px; }
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 8px;
 }
-.art-wall figure { margin: 0; padding: 12px 8px 10px; display: grid; gap: 6px; justify-items: center; border-bottom: 2px solid var(--team); background: var(--pit-wall); }
+.art-wall figure { cursor: pointer; margin: 0; padding: 12px 8px 10px; display: grid; gap: 6px; justify-items: center; border-bottom: 2px solid var(--team); background: var(--pit-wall); }
 .art-wall img { height: 56px; width: 100%; object-fit: contain; }
+.art-wall figure:hover { outline: 2px solid var(--team); }
 .art-wall figcaption { font-family: var(--display); font-weight: 600; font-size: 1.02rem; }
 .offers { margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .offer { padding: 22px 22px 24px; display: grid; gap: 8px; align-content: start; }

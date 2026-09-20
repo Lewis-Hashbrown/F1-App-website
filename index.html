@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>F1 Schedule Widgets for Android</title>
-  <meta name="description" content="Home screen widgets for Android that show every session of the next Formula 1 race weekend in your own time zone, with reminders and team and driver themes.">
+  <meta name="description" content="Home screen widgets for Android in five sizes, showing every session of the next Formula 1 race weekend in your own time zone, with reminders and team and driver themes.">
   <meta name="theme-color" content="#0b0f13">
   <meta property="og:title" content="F1 Schedule Widgets for Android">
   <meta property="og:description" content="Every session of the next race weekend on your home screen, in your time zone.">
-  <meta property="og:image" content="https://f1-schedule-widgets.netlify.app/assets/screens/homescreen.webp">
+  <meta property="og:image" content="https://f1-schedule-widgets.netlify.app/assets/cards/verstappen.webp">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,7 @@
       </a>
       <nav class="site-nav" aria-label="Sections">
         <a href="#weekend">This weekend</a>
+        <a href="#sizes">Sizes</a>
         <a href="#themes">Themes</a>
         <a href="#calendar">Calendar</a>
         <a href="#privacy">Privacy</a>
@@ -47,29 +48,15 @@
         </div>
 
         <div class="demo">
-          <div class="widget-shell">
-            <div class="widget" data-widget role="img" aria-label="Widget preview">
-              <div class="frame"></div>
-              <img class="track" data-track src="assets/tracks/baku.webp" alt="">
-              <img class="corner left" data-corner-left src="assets/frames/red_bull_corner.svg" alt="">
-              <img class="corner right" data-corner-right src="assets/frames/red_bull_corner_right.svg" alt="">
-              <div class="grid">
-                <div class="dates" data-dates></div>
-                <div class="badge">
-                  <img class="header" data-header src="assets/frames/red_bull_header.svg" alt="">
-                  <span class="gap"></span>
-                  <img class="art" data-art src="assets/art/verstappen.webp" alt="">
-                </div>
-                <div class="gp" data-gp></div>
-                <div class="rows" data-rows></div>
-                <div class="place" data-place></div>
-              </div>
-            </div>
+          <p class="stack-name" data-stack-name>Standard</p>
+          <div class="stack" data-stack role="img" aria-label="Widget preview">
+            <img data-card="0" src="assets/cards/standard.webp" alt="" width="720" height="583">
+            <img data-card="1" src="assets/cards/verstappen.webp" alt="" width="720" height="583">
+            <img data-card="2" src="assets/cards/norris.webp" alt="" width="720" height="583">
           </div>
           <div class="theme-picker" data-picker role="group" aria-label="Try a theme"></div>
-          <p class="demo-caption">This is the real schedule, shown in <span data-zone>your time zone</span>. Pick a theme to see how it changes the widget.</p>
+          <p class="demo-caption">The 3x2 widget during qualifying at Spa. Your widget shows the next race, in <span data-zone>your time zone</span>.</p>
         </div>
-      </div>
     </section>
 
     <section id="weekend" aria-labelledby="weekend-title">
@@ -82,19 +69,33 @@
       </div>
     </section>
 
-    <section aria-labelledby="widgets-title">
-      <div class="wrap feature">
+    <section id="sizes" aria-labelledby="widgets-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="widgets-title">Five sizes, no setup</h2>
+          <p>Pick the shape that fits your home screen. Every size shows the next session, and each one keeps the same shape on every phone.</p>
+        </div>
+        <div class="size-grid">
+          <figure class="compact"><img src="assets/sizes/standard_small.webp" alt="Compact 2x2 widget" loading="lazy" width="430" height="348"><figcaption>Compact · 2x2</figcaption></figure>
+          <figure class="tall"><img src="assets/sizes/standard_tall.webp" alt="Tall 2x2 widget" loading="lazy" width="430" height="688"><figcaption>Tall · 2x2</figcaption></figure>
+          <figure><img src="assets/sizes/standard_medium.webp" alt="Medium 3x2 widget" loading="lazy" width="620" height="502"><figcaption>Medium · 3x2</figcaption></figure>
+          <figure><img src="assets/sizes/standard_wide.webp" alt="Wide 4x2 widget" loading="lazy" width="740" height="461"><figcaption>Wide · 4x2</figcaption></figure>
+          <figure><img src="assets/sizes/standard_large.webp" alt="Large 4x3 widget" loading="lazy" width="740" height="599"><figcaption>Large · 4x3</figcaption></figure>
+        </div>
+      </div>
+      <div class="wrap feature" style="margin-top:48px">
         <div>
-          <h2 id="widgets-title">Two sizes, no setup</h2>
+          <h2>On your home screen, all weekend</h2>
           <ul>
-            <li><b>Compact 2×2 or wide 3×2.</b> Both show all five sessions, the circuit and its track map.</li>
-            <li><b>Your time zone.</b> Times change automatically when you travel or the clocks change.</li>
-            <li><b>Sprint weekends.</b> Sprint Qualifying and the Sprint replace practice sessions when they run.</li>
-            <li><b>Always the next race.</b> The widget moves on once a race weekend ends.</li>
+            <li><b>LIVE NOW.</b> A red dot marks the session that is running right now.</li>
+            <li><b>Finished sessions.</b> They grey out and get a tick, so you see what is left.</li>
+            <li><b>Your time zone.</b> Times change by themselves when you travel or the clocks change.</li>
+            <li><b>Sprint weekends.</b> Sprint Qualifying and the Sprint replace practice when they run.</li>
+            <li><b>Always the next race.</b> The widget moves on two hours after the race starts.</li>
             <li><b>Works offline.</b> The full 2026 calendar is built into the app.</li>
           </ul>
         </div>
-        <div class="phone"><img src="assets/screens/homescreen.webp" alt="Android home screen with the F1 widget showing the Azerbaijan Grand Prix sessions" width="540" height="1200" loading="lazy"></div>
+        <div class="phone"><img src="assets/screens/homescreen.webp" alt="Android home screen with two F1 widgets showing the Belgian Grand Prix, qualifying live" width="540" height="1200" loading="lazy"></div>
       </div>
     </section>
 
@@ -103,12 +104,13 @@
         <div>
           <h2 id="reminders-title">Reminders before the lights go out</h2>
           <ul>
-            <li><b>Pick your sessions.</b> Turn reminders on for any practice, qualifying, sprint or race.</li>
+            <li><b>Pick your sessions.</b> Turn reminders on for any practice, qualifying or the race.</li>
+            <li><b>Sprint, split in two.</b> Sprint Qualifying and the Sprint race have their own switches.</li>
             <li><b>Pick your timing.</b> Get a reminder 15, 30, 45 or 60 minutes before, or several of these.</li>
             <li><b>Weekend alert.</b> An optional note at 9am on the first day of each race weekend.</li>
           </ul>
         </div>
-        <div class="phone"><img src="assets/screens/notifications.webp" alt="Notification settings with reminders on for qualifying, sprint and race, 15 and 60 minutes before" width="540" height="1200" loading="lazy"></div>
+        <div class="phone"><img src="assets/screens/notifications.webp" alt="Notification settings with reminders on for qualifying, sprint and race, 15 and 60 minutes before, and separate Sprint Qualifying and Sprint Race switches" width="540" height="1200" loading="lazy"></div>
       </div>
     </section>
 
@@ -116,7 +118,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2 id="themes-title">Theme Packs for all 11 teams and 22 drivers</h2>
-          <p>Give your widget your team's colours or your driver's helmet. Every theme works on both widget sizes. The Standard look stays free.</p>
+          <p>Give your widget your team's colours or your driver's number. Every theme works on all five widget sizes. The Standard look stays free.</p>
         </div>
         <div class="art-wall" data-wall></div>
 
@@ -129,7 +131,7 @@
           <div class="offer panel">
             <h3>One team or driver</h3>
             <p class="price">£1.99</p>
-            <p>A one-time purchase through Google Play. Yours to keep.</p>
+            <p>A one-time purchase through Google Play. Yours to keep, on every widget size.</p>
           </div>
           <div class="offer panel accent">
             <h3>All 33 themes</h3>
@@ -141,7 +143,7 @@
 
         <div class="phones" style="margin-top:48px">
           <div class="phone"><img src="assets/screens/shop.webp" alt="Theme Packs screen with team and driver themes" width="540" height="1200" loading="lazy"></div>
-          <div class="phone"><img src="assets/screens/detail.webp" alt="Norris theme page with compact and wide widget previews" width="540" height="1200" loading="lazy"></div>
+          <div class="phone"><img src="assets/screens/detail.webp" alt="McLaren theme page, cycling through all five widget sizes" width="540" height="1200" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -191,7 +193,7 @@
         <div class="faq">
           <details>
             <summary>How do I add the widget?</summary>
-            <p>Touch and hold an empty part of your home screen, tap Widgets, then search for F1. Drag the size you want onto your home screen.</p>
+            <p>Touch and hold an empty part of your home screen, tap Widgets, then search for F1. The sizes are listed as Race Weekend (Compact), (Tall), (Medium), (Wide) and (Large). Drag the one you want onto your home screen.</p>
           </details>
           <details>
             <summary>My reminders arrive late or not at all.</summary>
@@ -203,7 +205,7 @@
           </details>
           <details>
             <summary>What happens when my trial ends?</summary>
-            <p>Your widget goes back to the Standard look. Themes you bought stay active. Schedules and reminders are always free.</p>
+            <p>Your widget goes back to the free Standard look, in red and black. Themes you bought stay active. Schedules and reminders are always free.</p>
           </details>
           <details>
             <summary>A session time looks wrong.</summary>

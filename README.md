@@ -11,10 +11,11 @@ The Play Store listing links to `privacy-policy.html`, so keep that file name.
 - `privacy-policy.html` – privacy policy, including how to ask for data deletion (`#delete`).
 - `terms.html` – free trial and theme purchase terms.
 - `styles.css` – shared styles. Colours and panel shapes copy the app.
-- `site.js` – widget demo, weekend timeline, calendar and theme wall.
+- `site.js` – hero card stack, weekend timeline, calendar and theme wall.
 - `races.js` – 2026 calendar in UTC, copied from the app's `F1Official2026Fetcher.kt`.
 - `assets/art` – team and driver artwork from the app.
-- `assets/frames` – theme stripes and corners, converted from the app's vector drawables to SVG.
+- `assets/cards` – the 3x2 widget drawn by the app, one picture per theme (hero stack).
+- `assets/sizes` – the Standard card at each of the five widget sizes.
 - `assets/tracks` – circuit outlines from the app.
 - `assets/screens` – app screenshots taken on an emulator.
 
@@ -22,6 +23,8 @@ The Play Store listing links to `privacy-policy.html`, so keep that file name.
 
 - **Calendar changes:** update `races.js` from the app's fetcher data.
 - **New app screens:** replace the WebP files in `assets/screens`, keeping the names.
+- **New widget art:** run `ConceptCardTest#rendersWebsiteCards` in the app project, pull
+  `concept_website` from the device, and convert the PNGs to WebP into `assets/cards` and `assets/sizes`.
 - **Privacy changes:** update `privacy-policy.html` and its "Last updated" date before the app change ships.
 
 Preview locally with `python -m http.server 8765` in this folder, then open http://localhost:8765.
