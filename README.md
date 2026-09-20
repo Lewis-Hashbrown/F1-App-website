@@ -1,6 +1,6 @@
-# F1 Schedule Widgets website
+# F1 Race Widgets website
 
-Static site for the F1 Schedule Widgets Android app. Netlify publishes this repo from GitHub on every push to `main`:
+Static site for the F1 Race Widgets Android app. Netlify publishes this repo from GitHub on every push to `main`:
 https://f1-schedule-widgets.netlify.app/
 
 The Play Store listing links to `privacy-policy.html`, so keep that file name.

@@ -10,7 +10,7 @@ Copy the text below straight into Play Console.
 ## App name (30 max)
 
 ```
-F1 Schedule Widgets
+F1 Race Widgets
 ```
 
 19 characters.
@@ -28,7 +28,7 @@ Every F1 2026 session on your home screen, in your own time zone. No ads.
 ```
 Put the whole Formula 1 race weekend on your home screen.
 
-F1 Schedule Widgets shows every session of the next Grand Prix, converted to your own time zone, without opening anything. Practice, qualifying, sprint and race, all at a glance.
+F1 Race Widgets shows every session of the next Grand Prix, converted to your own time zone, without opening anything. Practice, qualifying, sprint and race, all at a glance.
 
 FIVE WIDGET SIZES
 Pick the one that fits your home screen. Each has its own design, not a stretched copy of the others.
@@ -73,7 +73,7 @@ WHAT COSTS MONEY
 PRIVACY
 The schedule needs no account and sends nothing. If you start the theme trial you sign in with Google, and we store your account details and trial date so each account gets one trial. You can ask us to delete that at any time. Full details: https://f1-schedule-widgets.netlify.app/privacy-policy.html
 
-F1 Schedule Widgets is an unofficial app made by an independent developer. It is not associated with, endorsed by, or connected to Formula 1, the FIA, or any team or driver.
+F1 Race Widgets is an unofficial app made by an independent developer. It is not associated with, endorsed by, or connected to Formula 1, the FIA, or any team or driver.
 ```
 
 ## What's new (500 max)
