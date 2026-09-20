@@ -1,198 +1,150 @@
-# F1 Widget 2025 - Google Play Store Listing
+# Google Play store listing
 
-## App Title (30 characters max)
-F1 Widget 2025
+For `com.f1widget`, the 2026 release. Replaces the old 2025 listing, which named the wrong app,
+the wrong season, and claimed the app collects no data.
 
-## Short Description (80 characters max)
-Never miss F1 sessions! Shows FP1, FP2, FP3, Qualifying, Race times on home screen
-
-## Full Description (4000 characters max)
-
-🏎️ NEVER MISS A FORMULA 1 SESSION AGAIN! 🏎️
-
-F1 Widget 2025 brings the complete Formula 1 race weekend schedule directly to your Android home screen. Whether it's practice sessions, qualifying, or race day - you'll always know when the action starts!
-
-🏁 KEY FEATURES:
-
-📅 COMPLETE SESSION SCHEDULE
-• View all race weekend sessions: FP1, FP2, FP3, Qualifying, Race
-• Sprint weekends fully supported with Sprint Qualifying and Sprint Race
-• Never miss a moment of F1 action
-
-🌍 AUTOMATIC TIME ZONES
-• All session times converted to your local timezone
-• No more manual calculations or confusion about race start times
-• Perfect for F1 fans around the world
-
-🏆 2025 SEASON READY
-• Updated with the complete 2025 Formula 1 calendar
-• All 24 races from Bahrain to Abu Dhabi
-• Track layouts and country flags for each race
-
-⚡ LIVE UPDATES
-• Widget automatically updates to show the next upcoming session
-• Stay informed without opening any apps
-• Smart detection of current vs upcoming race weekends
-
-🎨 MULTIPLE WIDGET SIZES
-• 2x2 compact layout for smaller spaces
-• Five sizes: Compact 2x2, Tall 2x2, Medium 3x2, Wide 4x2 and Large 4x3
-• Choose the size that fits your home screen perfectly
-
-🔋 BATTERY FRIENDLY
-• Optimized for minimal battery usage
-• Efficient background updates
-• No unnecessary resource consumption
-
-🎯 PERFECT FOR:
-• Formula 1 fans who want instant session times
-• Racing enthusiasts following every practice session
-• Anyone who doesn't want to miss qualifying or race start
-• F1 followers in different time zones
-
-💎 PREMIUM EXPERIENCE:
-• Completely FREE with no ads
-• No data collection or tracking
-• Privacy-focused design
-• Support independent development
-
-🚀 EASY SETUP:
-1. Install F1 Widget 2025
-2. Long press your home screen
-3. Select "Widgets"
-4. Choose "F1 Widget 2025"
-5. Enjoy instant F1 session times!
-
-Whether you're a casual F1 viewer or a hardcore fan who watches every practice session, F1 Widget 2025 ensures you never miss the action. From the season opener in Bahrain to the finale in Abu Dhabi, stay connected to every race weekend.
-
-Download now and join thousands of F1 fans who rely on F1 Widget 2025 for their race weekend schedules!
-
-🏎️ Ready for lights out! 🏎️
+Copy the text below straight into Play Console.
 
 ---
 
-## Keywords/Tags (separated by commas)
-Formula 1, F1, racing, widget, schedule, times, Grand Prix, motorsport, race weekend, qualifying, practice, home screen, timezone, 2025 season, Bahrain, Monaco, Silverstone, Monza, Spa, racing calendar
+## App name (30 max)
+
+```
+F1 Schedule Widgets
+```
+
+19 characters.
+
+## Short description (80 max)
+
+```
+Every F1 2026 session on your home screen, in your own time zone. No ads.
+```
+
+72 characters.
+
+## Full description (4000 max)
+
+```
+Put the whole Formula 1 race weekend on your home screen.
+
+F1 Schedule Widgets shows every session of the next Grand Prix, converted to your own time zone, without opening anything. Practice, qualifying, sprint and race, all at a glance.
+
+FIVE WIDGET SIZES
+Pick the one that fits your home screen. Each has its own design, not a stretched copy of the others.
+- 2x2 Compact
+- 2x2 Tall
+- 3x2 Medium
+- 4x2 Wide
+- 4x3 Large
+
+YOUR TIME ZONE, AUTOMATICALLY
+Session times are converted for you, wherever you are. No working out what 14:00 CET means on a Sunday afternoon. Daylight saving is handled too.
+
+THE WHOLE 2026 SEASON
+All 24 rounds are built into the app. Sprint weekends show the sprint sessions in the right order. The widget always moves on to whatever is next.
+
+REMINDERS YOU CHOOSE
+Get a notification before the sessions you care about. Pick which ones, and how long before. Turn off the ones you do not want.
+
+WORKS OFFLINE
+The calendar lives inside the app. Looking up a session time sends nothing over the internet and works with no signal.
+
+NO ADS, NO TRACKING
+No adverts. No analytics. No advertising ID. The schedule, the widgets and the reminders are free and stay free.
+
+TEAM AND DRIVER THEME PACKS
+Give your widget your team's colours or your driver's number. 11 teams and 22 drivers, drawn to match every widget size.
+
+Try all 33 themes free for 14 days. Sign in with Google to start it. It ends by itself. There is no subscription, nothing to cancel, and we never ask for payment details to start it.
+
+After that, keep the Standard look for free, or buy the themes you want. Each theme is a one-time payment through Google Play, never a subscription. Buy the full 2026 collection and themes you already own come off the price.
+
+WHAT IS FREE
+- Every widget size
+- The full 2026 calendar
+- Time zone conversion
+- Session reminders
+- The Standard theme
+
+WHAT COSTS MONEY
+- Team and driver Theme Packs, as one-time purchases
+
+PRIVACY
+The schedule needs no account and sends nothing. If you start the theme trial you sign in with Google, and we store your account details and trial date so each account gets one trial. You can ask us to delete that at any time. Full details: https://f1-schedule-widgets.netlify.app/privacy-policy.html
+
+F1 Schedule Widgets is an unofficial app made by an independent developer. It is not associated with, endorsed by, or connected to Formula 1, the FIA, or any team or driver.
+```
+
+## What's new (500 max)
+
+```
+The 2026 season, and a rebuilt widget.
+
+- All 24 rounds of the 2026 calendar
+- Five widget sizes, each with its own design
+- Team and driver Theme Packs, with a 14-day free trial
+- Clearer reminders, with per-session control
+- Widget list now runs smallest to largest
+- Faster, tidier home screen
+
+The schedule, widgets and reminders stay free.
+```
+
+## Category and rating
+
+- Category: Sports
+- Content rating: Everyone
+- Contains ads: **No**
+- In-app purchases: **Yes** - GBP 1.99 per theme, GBP 4.99 for the collection
+
+## Contact
+
+- Email: Lewisbrown2208@gmail.com
+- Website: https://f1-schedule-widgets.netlify.app
+- Privacy policy: https://f1-schedule-widgets.netlify.app/privacy-policy.html
 
 ---
 
-## Content Rating
-Everyone
+## Graphics still needed
+
+| Asset | Requirement | Status |
+|---|---|---|
+| App icon | 512 x 512 PNG | Ready - `design/play_store_icon_512.png` in the app repo |
+| Feature graphic | 1024 x 500 PNG or JPEG | **Missing. Play will not publish without it.** |
+| Phone screenshots | 2 to 8, PNG or JPEG | Need exporting as PNG |
+| Tablet screenshots | Optional | None |
+
+Website screenshots live in `assets/screens/` and `assets/sizes/`, but they are WebP and Play needs
+PNG or JPEG, so they need converting before upload.
+
+### Suggested screenshots, in order
+
+1. Widgets on a real home screen - the thing people are actually buying
+2. The five sizes side by side
+3. A team theme and a driver theme
+4. The reminder settings
+5. The race schedule page
 
 ---
 
-## Category
-Sports
+## Data safety form
 
----
+This must match the privacy policy, or Google can reject or remove the app. The old listing claimed
+no data was collected, which is no longer true.
 
-## Screenshots Descriptions (for reference when taking screenshots)
+Declare **collected and linked to the user**, for the free trial only:
 
-### Screenshot 1: Main Widget on Home Screen
-Caption: "F1 session times right on your home screen"
+| Data | Purpose |
+|---|---|
+| Email address | Account management - one trial per Google account |
+| Name | Account management |
+| User ID (Firebase) | Account management |
+| Approximate location from IP | App functionality and fraud prevention |
 
-### Screenshot 2: Widget Showing Sprint Weekend
-Caption: "Sprint weekends fully supported with all sessions"
+Also declare:
 
-### Screenshot 3: Main App Interface
-Caption: "Clean, easy-to-use interface with support options"
-
-### Screenshot 4: Multiple Widget Sizes
-Caption: "Five widget sizes, from Compact 2x2 to Large 4x3"
-
-### Screenshot 5: Settings Screen
-Caption: "Customize notifications and preferences"
-
----
-
-## What's New (Release Notes Template)
-
-🏁 F1 Widget 2025 - Initial Release
-
-✨ NEW FEATURES:
-• Complete 2025 F1 calendar with all 24 races
-• Automatic timezone conversion for all sessions
-• Sprint weekend support (Practice, Sprint Qualifying, Sprint Race, GP Qualifying, Race)
-• Beautiful track layouts and country flags
-• Five widget sizes (2x2 Compact, 2x2 Tall, 3x2, 4x2, 4x3)
-• Battery-optimized background updates
-• Tap widget to open main app
-• Free and ad-free experience
-
-🏎️ SUPPORTED SESSIONS:
-• Free Practice 1, 2, 3
-• Qualifying
-• Sprint Qualifying
-• Sprint Race
-• Grand Prix
-
-Ready for the 2025 season! Download now and never miss another F1 session.
-
----
-
-## Privacy Policy URL
-https://your-website.com/privacy-policy.html
-
----
-
-## Support Email
-Lewisbrown2208@gmail.com
-
----
-
-## Website URL
-https://your-website.com
-
----
-
-## Target Age Group
-Everyone
-
----
-
-## Content Guidelines Compliance
-
-✅ No violence or inappropriate content
-✅ No gambling features
-✅ No in-app purchases
-✅ No ads or data collection
-✅ Family-friendly content
-✅ Sports/informational app
-✅ No user-generated content
-✅ Privacy-focused design
-
----
-
-## Marketing Copy for Social Media
-
-### Twitter/X Post:
-🏎️ NEW: F1 Widget 2025 for Android! 
-Never miss FP1, FP2, FP3, Qualifying, or Race starts again. 
-✅ All 2025 races
-✅ Sprint weekends supported  
-✅ Auto timezone conversion
-✅ FREE & no ads
-Download: [Play Store Link]
-#F1 #Formula1 #Android
-
-### Instagram Caption:
-🏁 F1 fans, this one's for you! 
-
-F1 Widget 2025 puts every practice session, qualifying, and race time right on your Android home screen. No more missing lights out because you forgot to check the time! 
-
-✨ Features:
-• Complete 2025 F1 calendar
-• Automatic timezone conversion
-• Sprint weekends included
-• Beautiful track layouts
-• FREE with no ads
-
-Ready for Bahrain? Download F1 Widget 2025 now! 
-
-#F1 #Formula1 #Racing #Android #App #Motorsport #GrandPrix
-
----
-
-Created: January 2025
-Developer: Lewis Brown
-Contact: Lewisbrown2208@gmail.com
+- Encrypted in transit: **Yes**
+- Users can request deletion: **Yes**, at https://f1-schedule-widgets.netlify.app/privacy-policy.html#delete
+- Shared with third parties: **No**
+- Used for advertising: **No**
