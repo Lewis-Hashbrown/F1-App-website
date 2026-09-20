@@ -79,17 +79,19 @@ F1 Race Widgets is an unofficial app made by an independent developer. It is not
 ## What's new (500 max)
 
 ```
-The 2026 season, and a rebuilt widget.
+A full overhaul for the 2026 season.
 
-- All 24 rounds of the 2026 calendar
-- Five widget sizes, each with its own design
-- Team and driver Theme Packs, with a 14-day free trial
-- Clearer reminders, with per-session control
-- Widget list now runs smallest to largest
-- Faster, tidier home screen
+• Completely redesigned widgets, redrawn from scratch
+• Team and driver Theme Packs — 33 of them, free for 14 days
+• Five widget sizes, from 2x2 Compact to 4x3 Large
+• All 24 rounds of the 2026 calendar
+• Clearer reminders, with per-session control
+• Faster, tidier home screen
 
 The schedule, widgets and reminders stay free.
 ```
+
+363 characters.
 
 ## Category and rating
 
