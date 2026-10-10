@@ -1,6 +1,6 @@
 # Google Play store listing
 
-For `com.f1widget`, the 2026 release. Replaces the old 2025 listing, which named the wrong app,
+For `com.f1widget`, the 2026 release. Updated 10 October 2026 for 4.17 (live calendar, Classic widgets). Replaces the old 2025 listing, which named the wrong app,
 the wrong season, and claimed the app collects no data.
 
 Copy the text below straight into Play Console.
@@ -30,6 +30,9 @@ Put the whole Formula 1 race weekend on your home screen.
 
 F1 Race Widgets shows every session of the next Grand Prix, converted to your own time zone, without opening anything. Practice, qualifying, sprint and race, all at a glance.
 
+LIVE RACE CALENDAR
+Race dates and times update automatically whenever F1 changes the schedule. No app update needed. Cancelled races are marked Cancelled in the schedule and skipped on your widgets, so the widget always shows the next race that is really happening. Sprint weekends show the sprint sessions in the right order.
+
 FIVE WIDGET SIZES
 Pick the one that fits your home screen. Each has its own design, not a stretched copy of the others.
 - 2x2 Compact
@@ -38,17 +41,17 @@ Pick the one that fits your home screen. Each has its own design, not a stretche
 - 4x2 Wide
 - 4x3 Large
 
+CLASSIC WIDGETS
+Prefer the original look? Classic 2x2 and Classic 3x2 are back. Open the app, tap "How to add a widget", then tap Classic 2x2 or Classic 3x2.
+
 YOUR TIME ZONE, AUTOMATICALLY
 Session times are converted for you, wherever you are. No working out what 14:00 CET means on a Sunday afternoon. Daylight saving is handled too.
 
-THE WHOLE 2026 SEASON
-All 24 rounds are built into the app. Sprint weekends show the sprint sessions in the right order. The widget always moves on to whatever is next.
-
 REMINDERS YOU CHOOSE
-Get a notification before the sessions you care about. Pick which ones, and how long before. Turn off the ones you do not want.
+Get a notification before the sessions you care about. Pick which ones, and how long before. Turn off the ones you do not want. Reminders keep working after your phone restarts.
 
 WORKS OFFLINE
-The calendar lives inside the app. Looking up a session time sends nothing over the internet and works with no signal.
+The calendar is saved inside the app, so session times and reminders work with no signal. When you are online, the app checks once a day for calendar changes. It downloads the public race calendar and sends nothing about you.
 
 NO ADS, NO TRACKING
 No adverts. No analytics. No advertising ID. The schedule, the widgets and the reminders are free and stay free.
@@ -61,8 +64,8 @@ Try all 33 themes free for 14 days. Sign in with Google to start it. It ends by 
 After that, keep the Standard look for free, or buy the themes you want. Each theme is a one-time payment through Google Play, never a subscription. Buy the full 2026 collection and themes you already own come off the price.
 
 WHAT IS FREE
-- Every widget size
-- The full 2026 calendar
+- Every widget size, including Classic
+- The full 2026 calendar, kept up to date
 - Time zone conversion
 - Session reminders
 - The Standard theme
@@ -71,27 +74,27 @@ WHAT COSTS MONEY
 - Team and driver Theme Packs, as one-time purchases
 
 PRIVACY
-The schedule needs no account and sends nothing. If you start the theme trial you sign in with Google, and we store your account details and trial date so each account gets one trial. You can ask us to delete that at any time. Full details: https://f1-schedule-widgets.netlify.app/privacy-policy.html
+The schedule needs no account. Once a day the app downloads the public race calendar, and it sends no personal information to do it. If you start the theme trial you sign in with Google, and we store your account details and trial date so each account gets one trial. You can ask us to delete that at any time. Full details: https://f1-schedule-widgets.netlify.app/privacy-policy.html
+
+Race calendar data from F1Calendar.com.
 
 F1 Race Widgets is an unofficial app made by an independent developer. It is not associated with, endorsed by, or connected to Formula 1, the FIA, or any team or driver.
 ```
 
+3050 characters.
+
 ## What's new (500 max)
 
 ```
-A full overhaul for the 2026 season.
-
-• Completely redesigned widgets, redrawn from scratch
-• Team and driver Theme Packs — 33 of them, free for 14 days
-• Five widget sizes, from 2x2 Compact to 4x3 Large
-• All 24 rounds of the 2026 calendar
-• Clearer reminders, with per-session control
-• Faster, tidier home screen
-
-The schedule, widgets and reminders stay free.
+• Live race calendar: race dates and times now update automatically whenever F1 changes the schedule. No app update needed
+• Cancelled races show as Cancelled in the schedule and are skipped on widgets
+• Classic widgets are back! Open the app, tap "How to add a widget", then tap Classic 2x2 or Classic 3x2 at the bottom
+• New Malaysia (Sepang) track map and photo
+• Reminders now show round times, like "15 min"
+• Bug fixes and speed improvements
 ```
 
-363 characters.
+447 characters. Version 4.17 (code 47).
 
 ## Category and rating
 
