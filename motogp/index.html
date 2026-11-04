@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MotoGP Race Widgets</title>
+  <meta name="description" content="An Android widget that shows every session of the next MotoGP weekend on your home screen, in your own time zone. With reminders and team and rider themes.">
+  <meta name="theme-color" content="#0b0f13">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .hero-card { width: 100%; max-width: 520px; height: auto; border-radius: 14px; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, .55)); }
+    .soon { display: inline-block; padding: 12px 18px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, .25); font-family: var(--display); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .feature-list .panel { padding: 22px; display: grid; gap: 8px; align-content: start; }
+    .feature-list p { color: var(--telemetry); }
+    .teams { display: grid; gap: 28px; }
+    .team h3 { margin: 0 0 10px; }
+    .team-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .team-cards figure { margin: 0; display: grid; gap: 6px; }
+    .team-cards img { width: 100%; height: auto; border-radius: 10px; }
+    .team-cards figcaption { font-size: .9rem; color: var(--telemetry); }
+    @media (max-width: 720px) {
+      .feature-list { grid-template-columns: 1fr; }
+      .team-cards { grid-template-columns: 1fr 1fr; }
+      .team-cards figure:first-child { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="assets/icon-192.png" alt="" width="40" height="40">
+        <span><b>MotoGP</b> Race Widgets</span>
+      </a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#sizes">Sizes</a>
+        <a href="#themes">Themes</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title">The whole race weekend, on your home screen.</h1>
+          <p class="lede">An Android widget that shows every session of the next MotoGP Grand Prix, in your own time zone. Free Practice, Practice, Qualifying, the Sprint, Warm Up and the Race, all at a glance.</p>
+          <div class="actions">
+            <span class="soon">Coming soon to Google Play</span>
+            <span class="small">Free. Android 7 and newer.</span>
+          </div>
+        </div>
+        <div class="demo">
+          <img class="hero-card" src="assets/hero_standard.webp" alt="The free Standard widget showing the Qatar Grand Prix: next session FP1, then Practice, FP2, Q1 and the Race" width="720" height="720">
+        </div>
+      </div>
+    </section>
+
+    <section id="sizes" aria-labelledby="sizes-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="sizes-title">Five sizes, each with its own design</h2>
+          <p>Pick the shape that fits your home screen. Each size has its own layout, not a stretched copy of the others. Prefer a simpler look? Classic 2x2 and Classic 3x2 are there too.</p>
+        </div>
+        <div class="size-grid">
+          <figure class="compact"><img src="assets/sizes/standard_small.webp" alt="Compact 2x2 widget" loading="lazy" width="430" height="430"><figcaption>Compact · 2x2</figcaption></figure>
+          <figure class="tall"><img src="assets/sizes/standard_tall.webp" alt="Tall 2x2 widget" loading="lazy" width="430" height="683"><figcaption>Tall · 2x2</figcaption></figure>
+          <figure><img src="assets/sizes/standard_medium.webp" alt="Medium 3x2 widget" loading="lazy" width="620" height="620"><figcaption>Medium · 3x2</figcaption></figure>
+          <figure><img src="assets/sizes/standard_wide.webp" alt="Wide 4x2 widget" loading="lazy" width="740" height="446"><figcaption>Wide · 4x2</figcaption></figure>
+          <figure><img src="assets/sizes/standard_large.webp" alt="Large 4x3 widget" loading="lazy" width="740" height="740"><figcaption>Large · 4x3</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="features-title">What it does</h2>
+        </div>
+        <div class="feature-list">
+          <div class="panel"><h3>All 8 sessions</h3><p>The widget shows the next session big, then a row with the sessions after it, with the Race always at the end. Hide the sessions you don't care about and the row makes room for the rest.</p></div>
+          <div class="panel"><h3>Your time zone</h3><p>Session times are converted for you, wherever you are. Daylight saving is handled too.</p></div>
+          <div class="panel"><h3>Reminders you choose</h3><p>Get a notification before the sessions you care about. Each session has its own switch, and you pick how long before. Reminders keep working after your phone restarts.</p></div>
+          <div class="panel"><h3>Live race calendar</h3><p>Session times update by themselves when the schedule changes. Cancelled races are skipped, so the widget always shows the next race that is really happening.</p></div>
+          <div class="panel"><h3>Works offline</h3><p>The calendar is saved inside the app, so times and reminders work with no signal. When you are online, the app checks once a day for changes.</p></div>
+          <div class="panel"><h3>Track maps</h3><p>A map of the circuit for all 22 rounds of 2026, right on the widget.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="themes" aria-labelledby="themes-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="themes-title">Theme Packs for all 11 teams and 22 riders</h2>
+          <p>Give your widget your team's colours or your rider's number. Every theme works on all five widget sizes. The Standard look stays free.</p>
+        </div>
+
+        <div class="offers">
+          <div class="offer panel">
+            <h3>Try every theme</h3>
+            <p class="price">Free</p>
+            <p>14 days, once per Google account. Sign in with Google to start. It ends by itself and you are never charged.</p>
+          </div>
+          <div class="offer panel">
+            <h3>One team or rider</h3>
+            <p class="price">£1.99</p>
+            <p>A one-time purchase through Google Play. Yours to keep, on every widget size.</p>
+          </div>
+          <div class="offer panel accent">
+            <h3>All 33 themes</h3>
+            <p class="price">£4.99</p>
+            <p>The full 2026 collection. If you already bought single themes, up to 2 of them come off the price.</p>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:16px">UK prices. Google Play shows the price in your currency before you pay. Themes cover the 2026 season.</p>
+
+        <div class="teams" style="margin-top:40px">
+          <div class="team"><h3>Ducati</h3><div class="team-cards">
+            <figure><img src="assets/themes/ducati.webp" alt="Ducati team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/bagnaia.webp" alt="Francesco Bagnaia rider theme" loading="lazy" width="440" height="440"><figcaption>Francesco Bagnaia</figcaption></figure>
+            <figure><img src="assets/themes/marc_marquez.webp" alt="Marc Marquez rider theme" loading="lazy" width="440" height="440"><figcaption>Marc Marquez</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Aprilia</h3><div class="team-cards">
+            <figure><img src="assets/themes/aprilia.webp" alt="Aprilia team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/bezzecchi.webp" alt="Marco Bezzecchi rider theme" loading="lazy" width="440" height="440"><figcaption>Marco Bezzecchi</figcaption></figure>
+            <figure><img src="assets/themes/martin.webp" alt="Jorge Martin rider theme" loading="lazy" width="440" height="440"><figcaption>Jorge Martin</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Gresini</h3><div class="team-cards">
+            <figure><img src="assets/themes/gresini.webp" alt="Gresini team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/aldeguer.webp" alt="Fermin Aldeguer rider theme" loading="lazy" width="440" height="440"><figcaption>Fermin Aldeguer</figcaption></figure>
+            <figure><img src="assets/themes/alex_marquez.webp" alt="Alex Marquez rider theme" loading="lazy" width="440" height="440"><figcaption>Alex Marquez</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>VR46</h3><div class="team-cards">
+            <figure><img src="assets/themes/vr46.webp" alt="VR46 team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/morbidelli.webp" alt="Franco Morbidelli rider theme" loading="lazy" width="440" height="440"><figcaption>Franco Morbidelli</figcaption></figure>
+            <figure><img src="assets/themes/di_giannantonio.webp" alt="Fabio Di Giannantonio rider theme" loading="lazy" width="440" height="440"><figcaption>Fabio Di Giannantonio</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Honda HRC</h3><div class="team-cards">
+            <figure><img src="assets/themes/honda.webp" alt="Honda HRC team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/marini.webp" alt="Luca Marini rider theme" loading="lazy" width="440" height="440"><figcaption>Luca Marini</figcaption></figure>
+            <figure><img src="assets/themes/mir.webp" alt="Joan Mir rider theme" loading="lazy" width="440" height="440"><figcaption>Joan Mir</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>LCR Honda</h3><div class="team-cards">
+            <figure><img src="assets/themes/lcr.webp" alt="LCR Honda team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/zarco.webp" alt="Johann Zarco rider theme" loading="lazy" width="440" height="440"><figcaption>Johann Zarco</figcaption></figure>
+            <figure><img src="assets/themes/moreira.webp" alt="Diogo Moreira rider theme" loading="lazy" width="440" height="440"><figcaption>Diogo Moreira</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>KTM</h3><div class="team-cards">
+            <figure><img src="assets/themes/ktm.webp" alt="KTM team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/binder.webp" alt="Brad Binder rider theme" loading="lazy" width="440" height="440"><figcaption>Brad Binder</figcaption></figure>
+            <figure><img src="assets/themes/acosta.webp" alt="Pedro Acosta rider theme" loading="lazy" width="440" height="440"><figcaption>Pedro Acosta</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Tech3</h3><div class="team-cards">
+            <figure><img src="assets/themes/tech3.webp" alt="Tech3 team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/vinales.webp" alt="Maverick Vinales rider theme" loading="lazy" width="440" height="440"><figcaption>Maverick Vinales</figcaption></figure>
+            <figure><img src="assets/themes/bastianini.webp" alt="Enea Bastianini rider theme" loading="lazy" width="440" height="440"><figcaption>Enea Bastianini</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Yamaha</h3><div class="team-cards">
+            <figure><img src="assets/themes/yamaha.webp" alt="Yamaha team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/quartararo.webp" alt="Fabio Quartararo rider theme" loading="lazy" width="440" height="440"><figcaption>Fabio Quartararo</figcaption></figure>
+            <figure><img src="assets/themes/rins.webp" alt="Alex Rins rider theme" loading="lazy" width="440" height="440"><figcaption>Alex Rins</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Pramac</h3><div class="team-cards">
+            <figure><img src="assets/themes/pramac.webp" alt="Pramac team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/razgatlioglu.webp" alt="Toprak Razgatlioglu rider theme" loading="lazy" width="440" height="440"><figcaption>Toprak Razgatlioglu</figcaption></figure>
+            <figure><img src="assets/themes/miller.webp" alt="Jack Miller rider theme" loading="lazy" width="440" height="440"><figcaption>Jack Miller</figcaption></figure>
+          </div></div>
+          <div class="team"><h3>Trackhouse</h3><div class="team-cards">
+            <figure><img src="assets/themes/trackhouse.webp" alt="Trackhouse team theme" loading="lazy" width="440" height="440"><figcaption>Team</figcaption></figure>
+            <figure><img src="assets/themes/fernandez.webp" alt="Raul Fernandez rider theme" loading="lazy" width="440" height="440"><figcaption>Raul Fernandez</figcaption></figure>
+            <figure><img src="assets/themes/ogura.webp" alt="Ai Ogura rider theme" loading="lazy" width="440" height="440"><figcaption>Ai Ogura</figcaption></figure>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="privacy-title">What the app does with your data</h2>
+          <p>The short version. The <a class="text-link" href="privacy-policy.html">privacy policy</a> has the detail.</p>
+        </div>
+        <div class="facts">
+          <div class="fact panel">
+            <h3>No ads or tracking</h3>
+            <p>There are no adverts and no analytics. The widget needs no account. The app downloads the public race calendar once a day and sends nothing about you.</p>
+          </div>
+          <div class="fact panel">
+            <h3>Settings stay on your phone</h3>
+            <p>Your reminder choices and theme are stored on your device.</p>
+          </div>
+          <div class="fact panel">
+            <h3>The free trial uses Google sign-in</h3>
+            <p>To stop repeat trials, we keep an account ID and the date your trial started. Your email is held by Google's Firebase sign-in service. You can <a class="text-link" href="privacy-policy.html#delete">ask us to delete it</a>.</p>
+          </div>
+          <div class="fact panel">
+            <h3>Google Play handles payments</h3>
+            <p>We never see your card details. The app asks Google Play which themes you own.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by Lewis Brown. Questions or problems: <a class="text-link" href="mailto:Lewisbrown2208@gmail.com">Lewisbrown2208@gmail.com</a></p>
+      <nav aria-label="Legal">
+        <a class="text-link" href="privacy-policy.html">Privacy policy</a>
+        <a class="text-link" href="terms.html">Trial and purchase terms</a>
+      </nav>
+      <p class="legal">MotoGP Race Widgets is an unofficial app made by an independent developer. It is not associated with, endorsed by, or connected to MotoGP, Dorna Sports, the FIM, or any team or rider. MotoGP and related marks are trade marks of Dorna Sports S.L. Team and rider names are used to identify them. © 2026 Lewis Brown.</p>
+    </div>
+  </footer>
+</body>
+</html>
